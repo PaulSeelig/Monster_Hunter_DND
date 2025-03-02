@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD Campaign Book</title>
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: #f5f5f5;
+        }
+        nav 
+        {
+            width: 15%;
+            background: #222;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            height: 100%;
+            overflow-y: auto;
+        }
+        nav a 
+        {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .content 
+        {
+            margin-left: 270px;
+            margin-right: 270px;
+            padding: 20px;
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img 
+        {
+            max-width: 100%;
+            height: auto;
+        }
+        @media print 
+        {
+            body 
+            {
+                background: white;
+            }
+            .content 
+            {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+            nav 
+            {
+                display: none;
+            }
+            h1, h2
+            {
+                break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Table of Contents</h2>
+        <a href="#chapter1">Chapter 1: Overview</a>
+        <a href="#chapter2">Chapter 2: The World</a>
+        <a href="#chapter3">Chapter 3: Classes</a>
+    </nav>
+    <div class="content">
+        <h1>DnD Campaign Book</h1>
+        <div class="chapter">
+            <h2 id="chapter1">Chapter 1: Overview</h2>
+            <p>
+                With the release of Monster Hunter world and me finding a Monster Manual for Monster Hunter, <br>
+                I wanted to create a Monster Hunter inspired Campaign.
+            </p>
+            <p>
+                This Document will contain an overview of the world and how you would build a character inside this world.
+            </p>
+            <p>
+                The <b>only</b> Rule is thats this is my homebrew world, 
+                so it will differ significantly from the established world of Monster Hunter,
+                if you at any point say: "This isn't how this works in Monster Hunter", <br>
+                you are subject to the possibility of me taking away a level.
+            </p>
+            <h2 id="chapter2">Chapter 2: Factions</h2>
+            <p>
+                Details about different factions...
+            </p>
+        
+            <h2 id="chapter3">Chapter 3: Notable Locations</h2>
+            <p>Some interesting places...</p>
+
+            <h3>Interactive Map</h3>
+            <img src="map.jpg" usemap="#worldmap" alt="World Map">
+            <map name="worldmap">
+                <area shape="rect" coords="34,44,270,350" href="#chapter1" alt="The World">
+                <area shape="circle" coords="400,200,50" href="#chapter2" alt="Factions">
+                <area shape="poly" coords="600,100,650,150,600,200,550,150" href="#chapter3" alt="Notable Locations">
+            </map>
+        </div>
+    </div>
+</body>
+</html>
